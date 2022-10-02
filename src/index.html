@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Prediksi Index Price Bahan Makanan dengan Metode Regresi</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="bg-gray-50">
+
+    <div class="items-container flex flex-col justify-center min-h-screen">
+      <div class="outer-container-formula flex flex-col w-full justify-center items-center p-5">
+        <div class="wrapper bg-white border-2 rounded-lg p-7 w-full max-w-4xl">
+          <div class="formula">
+            <h1 class="font-bold text-xl text-center mb-4">Model Persamaan Regresi Linear</h1>
+            <div class="text-center overflow-auto">
+              <pre>Y1 (Food Price Index) = 0.5094395 * X1 + 0.0010908 * X2</pre>
+              <pre>Y2 (Meat Price Index) = 0.1197547 * X1 + 0.0019881 * X2</pre>
+              <pre>Y3 (Dairy Price Index) = 0.5221328 * X1 + 0.0010361 * X2</pre>
+              <pre>Y4 (Cereals Price Index) = 0.6581942 * X1 + 0.0007665 * X2</pre>
+              <pre>Y5 (Sugar Price Index) = 0.5562195 * X1 + 0.0008685 * X2</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="outer-container-input flex flex-col w-full justify-center items-center p-5">
+        <div class="wrapper bg-white border-2 rounded-lg p-7 w-full max-w-4xl">
+          <div class="grid grid-rows-2 gap-5">
+            <div class="md:flex md:flex-nowrap items-center">
+              <label for="oil-index-price" class="w-[33%]">
+                Oils Index Price (X1) :
+              </label>
+              <input type="number" max="100" name="oil-index-price" id="oil-index-price"
+                class="rounded-lg w-full mt-1 p-1 px-2 focus-within:outline-indigo-600 ring-2 ring-gray-300">
+            </div>
+            <div class="md:flex md:flex-nowrap items-center">
+              <label for="oil-export-comodity" class="w-[33%]">
+                Oils Export Comodity (X2) :
+              </label>
+              <input type="number" min="0" name="oil-export-comodity" id="oil-export-comodity"
+                class="rounded-lg w-full mt-1 p-1 px-2 focus-within:outline-indigo-600 ring-2 ring-gray-300">
+            </div>
+            <button id="submit-button" class="bg-gradient-to-br text-white to-blue-600 from-indigo-500 p-2 rounded-lg">
+              Prediksi Index Price
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <script src="index.js"></script>
+  </body>
+
+</html>
